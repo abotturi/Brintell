@@ -1,0 +1,13 @@
+.main-container-error{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 70px;
+}
+
+.container-error {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}

@@ -1,0 +1,29 @@
+version: '3.9'
+
+services: 
+  db:
+    container_name: db
+    image: mysql
+    restart: always
+    environment:    
+      MYSQL_ROOT_PASSWORD: 12345
+      MYSQL_DATABASE: brintell
+    ports:
+      - "3306:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost", "-uroot", "-ppass"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+  app:
+    container_name: app
+    build: .
+    command: >
+      sh -c "
+        npm run build &&
+        npm run start"
+    ports:
+      - "8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy

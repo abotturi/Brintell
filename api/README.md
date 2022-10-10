@@ -1,5 +1,4 @@
 ## Back-end
- - Entrar na pasta ```./api```
 
 #### Com Docker
  - Instalar o docker desktop e iniciar

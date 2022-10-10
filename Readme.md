@@ -11,6 +11,7 @@
     > Se caso não estiver, instalar
  - Liberar a porta **8080** e **3306** do computador
  - Entrar na raiz da pasta e dar o comando ```docker-compose up --build```
+    > Pode demorar um pouco para iniciar <br />
     > Esse comando iniciara o servidor e criara o banco de dados ja com as tabelas necessárias <br/>
     > Ao iniciar ira aparecer no terminal **Servidor aberto na porta 8080**
 
